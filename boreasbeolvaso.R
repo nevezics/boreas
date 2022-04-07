@@ -53,6 +53,11 @@ teljes <- c(teljes,nyers[[tti]])
 plot(teljes[,1])
 write.zoo(teljes[,1],"hom2021.csv",sep=";",dec=",")
 
+## Órás hőmérséklet
+ep.hours <- endpoints(teljes[,1], "hours")
+hom.hours <- period.apply(teljes[,1], ep.hours, mean)
+write.zoo(hom.hours,"hom2021oras.csv",sep=";",dec=",")
+
 ##Páratartalom
 plot(teljes[,3])
 write.zoo(teljes[,3],"para2021.csv",sep=";",dec=",")
