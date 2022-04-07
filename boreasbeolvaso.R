@@ -60,3 +60,8 @@ write.zoo(teljes[,3],"para2021.csv",sep=";",dec=",")
 ##Csapadék
 plot(teljes[,11])
 write.zoo(teljes[,11],"csap2021.csv",sep=";",dec=",")
+
+## Mentés napi összegként
+csap.napi <- apply.daily(teljes[,11], sum)
+plot(csap.napi, type = "h")
+write.zoo(csap.napi,"napicsap2021.csv",sep=";",dec=",")
