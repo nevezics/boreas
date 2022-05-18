@@ -40,8 +40,10 @@ ttfiles <- dir(ttpath,"2021")
 
 nyers <- list()
 
-for(tti in 1:length(ttfiles))
+for(tti in 1:length(ttfiles)){
 nyers[[tti]] <- process.boreas(ttfiles[tti], path=ttpath)
+cat(tti)
+}
 
 teljes <- nyers[[1]]
 for(tti in 2:length(nyers))
