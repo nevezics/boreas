@@ -42,7 +42,7 @@ nyers <- list()
 
 for(tti in 1:length(ttfiles)){
 nyers[[tti]] <- process.boreas(ttfiles[tti], path=ttpath)
-cat(tti)
+cat(paste0(tti, " "))
 }
 
 teljes <- nyers[[1]]
