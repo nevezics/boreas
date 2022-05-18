@@ -1,4 +1,5 @@
 library (xts)
+##Időbélyeg korrekció
 Sys.setenv(TZ='UTC')
 
 ##Beolvasó függvény
